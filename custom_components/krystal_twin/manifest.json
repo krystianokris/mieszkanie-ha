@@ -1,0 +1,20 @@
+{
+  "domain": "krystal_twin",
+  "name": "Krystal Twin (Mieszkanie na żywo)",
+  "codeowners": [
+    "@krystianokris"
+  ],
+  "config_flow": true,
+  "dependencies": [
+    "frontend",
+    "http",
+    "panel_custom"
+  ],
+  "documentation": "https://github.com/krystianokris/mieszkanie-ha",
+  "integration_type": "service",
+  "iot_class": "local_push",
+  "issue_tracker": "https://github.com/krystianokris/mieszkanie-ha/issues",
+  "requirements": [],
+  "single_config_entry": true,
+  "version": "0.1.0"
+}

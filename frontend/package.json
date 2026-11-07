@@ -1,0 +1,22 @@
+{
+  "name": "krystal-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "screenshots": "bun scripts/screenshots.ts"
+  },
+  "dependencies": {
+    "solid-js": "1.9.9"
+  },
+  "devDependencies": {
+    "@mdi/js": "^7.4.47",
+    "playwright": "1.63.0",
+    "typescript": "5.8.3",
+    "vite": "6.3.5",
+    "vite-plugin-solid": "2.11.8"
+  }
+}

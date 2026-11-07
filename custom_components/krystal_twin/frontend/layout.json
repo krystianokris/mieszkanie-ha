@@ -1,0 +1,1082 @@
+{
+  "version": 1,
+  "source": "krystal",
+  "language": "pl",
+  "summary": {
+    "lights": [
+      "switch.demo_1",
+      "switch.demo_2",
+      "switch.demo_3",
+      "switch.demo_4",
+      "light.demo_1",
+      "switch.demo_5",
+      "switch.demo_6",
+      "light.demo_2",
+      "switch.demo_7",
+      "switch.demo_8",
+      "switch.demo_9",
+      "switch.demo_10",
+      "switch.demo_11",
+      "switch.demo_12",
+      "switch.demo_13",
+      "switch.demo_14",
+      "switch.demo_15"
+    ],
+    "alerts": [
+      "binary_sensor.demo_1",
+      "binary_sensor.demo_2",
+      "binary_sensor.demo_3",
+      "binary_sensor.demo_4"
+    ],
+    "kicker": "TWÓJ DOM",
+    "title": "Dobrze być w domu.",
+    "subtitle": "Twój dom w jednym spojrzeniu. Wybierz pomieszczenie i zadbaj o swój komfort.",
+    "weather": "weather.demo_1",
+    "power": "sensor.demo_1"
+  },
+  "names": {
+    "climate.demo_1": "Nest · Salon",
+    "climate.demo_2": "Salon podłoga",
+    "climate.demo_3": "Kuchnia podłoga",
+    "climate.demo_4": "Kuchnia",
+    "climate.demo_5": "Klimatyzacja Sypialnia",
+    "climate.demo_6": "Klimatyzacja Gabinet",
+    "climate.demo_7": "Gabinet"
+  },
+  "features": {
+    "energy": {
+      "elecRate": "sensor.demo_2",
+      "elecNext": "sensor.demo_3",
+      "elecCost": "sensor.demo_4",
+      "elecUse": "sensor.demo_5",
+      "demand": "sensor.demo_1",
+      "ratesToday": "event.demo_1",
+      "ratesTomorrow": "event.demo_2",
+      "gasRate": "sensor.demo_6",
+      "gasCost": "sensor.demo_7",
+      "gasUse": "sensor.demo_8",
+      "waterUse": "sensor.demo_9",
+      "waterCost": "sensor.demo_10",
+      "waterReading": "sensor.demo_11"
+    },
+    "laundry": {
+      "dryer": {
+        "status": "sensor.demo_12",
+        "phase": "sensor.demo_13",
+        "remaining": "sensor.demo_14",
+        "total": "sensor.demo_15",
+        "program": "sensor.demo_16"
+      },
+      "washer": {
+        "status": "sensor.demo_17",
+        "phase": "sensor.demo_18",
+        "remaining": "sensor.demo_19",
+        "total": "sensor.demo_20",
+        "program": "sensor.demo_21"
+      }
+    },
+    "climateExtras": {
+      "climate.demo_5": [
+        "switch.demo_16"
+      ]
+    },
+    "f1": {
+      "nextRace": "sensor.demo_22",
+      "session": "sensor.demo_23",
+      "sessionStatus": "sensor.demo_24",
+      "trackStatus": "sensor.demo_25",
+      "trackWeather": "sensor.demo_26",
+      "lapCount": "sensor.demo_27",
+      "positions": "sensor.demo_28",
+      "driverList": "sensor.demo_29",
+      "tyres": "sensor.demo_30",
+      "pitStops": "sensor.demo_31",
+      "raceControl": "sensor.demo_32"
+    }
+  },
+  "pages": [
+    {
+      "id": "salon",
+      "title": "Salon",
+      "icon": "mdi:sofa-outline",
+      "kind": "room",
+      "devices": [
+        {
+          "entity": "switch.demo_7",
+          "kind": "plug",
+          "name": "Lampa podłogowa",
+          "action": "toggle"
+        },
+        {
+          "entity": "switch.demo_8",
+          "kind": "plug",
+          "name": "Meble (plug)",
+          "action": "toggle"
+        },
+        {
+          "entity": "light.demo_2",
+          "kind": "light",
+          "name": "LED sufit",
+          "art": "bulb",
+          "action": "toggle"
+        },
+        {
+          "entity": "switch.demo_5",
+          "kind": "light",
+          "name": "Światło Tv",
+          "art": "bulb",
+          "action": "toggle"
+        },
+        {
+          "entity": "switch.demo_6",
+          "kind": "light",
+          "name": "Światło sofa",
+          "art": "bulb",
+          "action": "toggle"
+        },
+        {
+          "entity": "fan.demo_1",
+          "kind": "purifier",
+          "name": "Oczyszczacz Salon",
+          "action": "toggle"
+        }
+      ],
+      "sections": [
+        {
+          "id": "salon-0",
+          "kicker": "POD KONTROLĄ",
+          "title": "Klimat i szczegóły",
+          "icon": "mdi:tune-variant",
+          "accent": "#ffc391",
+          "items": [
+            {
+              "entity": "climate.demo_1",
+              "kind": "climate",
+              "name": "Nest",
+              "icon": "mdi:thermometer",
+              "action": "info"
+            },
+            {
+              "entity": "climate.demo_2",
+              "kind": "climate",
+              "name": "Salon Floor",
+              "icon": "mdi:thermometer-lines",
+              "action": "info"
+            },
+            {
+              "entity": "sensor.demo_33",
+              "kind": "sensor",
+              "name": "Pyły PM2.5",
+              "icon": "mdi:molecule",
+              "action": "info"
+            },
+            {
+              "entity": "sensor.demo_34",
+              "kind": "sensor",
+              "name": "Filtr",
+              "icon": "mdi:filter-outline",
+              "action": "info"
+            }
+          ]
+        },
+        {
+          "id": "salon-1",
+          "kicker": "POD KONTROLĄ",
+          "title": "Czyste powietrze",
+          "icon": "mdi:air-purifier",
+          "accent": "#ffc391",
+          "items": [
+            {
+              "entity": "fan.demo_1",
+              "kind": "purifier",
+              "name": "Oczyszczacz · ustawienia",
+              "icon": "mdi:air-purifier",
+              "action": "info"
+            },
+            {
+              "entity": "sensor.demo_33",
+              "kind": "sensor",
+              "name": "Pyły PM2.5",
+              "icon": "mdi:molecule",
+              "action": "info"
+            },
+            {
+              "entity": "sensor.demo_35",
+              "kind": "sensor",
+              "name": "Jakość powietrza",
+              "icon": "mdi:air-filter",
+              "action": "info"
+            },
+            {
+              "entity": "sensor.demo_34",
+              "kind": "sensor",
+              "name": "Filtr",
+              "icon": "mdi:filter-outline",
+              "action": "info"
+            }
+          ]
+        }
+      ],
+      "kicker": "Salon",
+      "heading": "Salon",
+      "subtitle": "Ciepłe światło. Dobry odpoczynek.",
+      "accent": "#ffc391",
+      "image": "/api/image/serve/4785b86958d36760d0f96467a6636d80/original",
+      "temperature": "sensor.demo_36",
+      "humidity": "sensor.demo_37"
+    },
+    {
+      "id": "kuchnia",
+      "title": "Kuchnia",
+      "icon": "mdi:countertop-outline",
+      "kind": "room",
+      "devices": [
+        {
+          "entity": "switch.demo_1",
+          "kind": "light",
+          "name": "Światło",
+          "art": "bulb",
+          "action": "toggle"
+        },
+        {
+          "entity": "switch.demo_3",
+          "kind": "plug",
+          "name": "Zlew (plug)",
+          "action": "toggle"
+        },
+        {
+          "entity": "switch.demo_4",
+          "kind": "plug",
+          "name": "Szafki (R4)",
+          "action": "toggle"
+        },
+        {
+          "entity": "light.demo_1",
+          "kind": "light",
+          "name": "LED Kuchnia",
+          "art": "bulb",
+          "action": "toggle"
+        },
+        {
+          "entity": "media_player.demo_1",
+          "kind": "media",
+          "name": "Echo Dot",
+          "action": "toggle"
+        }
+      ],
+      "media": [
+        {
+          "entity": "media_player.demo_1",
+          "name": "Echo Dot · kuchnia"
+        }
+      ],
+      "sections": [
+        {
+          "id": "kuchnia-0",
+          "kicker": "POD KONTROLĄ",
+          "title": "Klimat i szczegóły",
+          "icon": "mdi:tune-variant",
+          "accent": "#9ff0c2",
+          "items": [
+            {
+              "entity": "binary_sensor.demo_5",
+              "kind": "binary",
+              "name": "Okno Kuchnia",
+              "icon": "mdi:window-closed-variant",
+              "action": "info"
+            },
+            {
+              "entity": "sensor.demo_13",
+              "kind": "sensor",
+              "name": "Suszarka",
+              "icon": "mdi:tumble-dryer",
+              "action": "info"
+            },
+            {
+              "entity": "climate.demo_3",
+              "kind": "climate",
+              "name": "Kitchen Floor",
+              "icon": "mdi:thermometer-lines",
+              "action": "info"
+            },
+            {
+              "entity": "climate.demo_4",
+              "kind": "climate",
+              "name": "Kitchen Thermostat",
+              "icon": "mdi:circle-outline",
+              "action": "info"
+            }
+          ]
+        },
+        {
+          "id": "kuchnia-1",
+          "kicker": "POD KONTROLĄ",
+          "title": "Stół, grill i bezpieczeństwo",
+          "icon": "mdi:countertop-outline",
+          "accent": "#9ff0c2",
+          "items": [
+            {
+              "entity": "switch.demo_17",
+              "kind": "plug",
+              "name": "Stół + grill",
+              "icon": "mdi:lightbulb-multiple"
+            },
+            {
+              "entity": "binary_sensor.demo_1",
+              "kind": "binary",
+              "name": "Wyciek · kuchnia",
+              "icon": "mdi:water-alert",
+              "action": "info"
+            },
+            {
+              "entity": "binary_sensor.demo_5",
+              "kind": "binary",
+              "name": "Okno",
+              "icon": "mdi:window-closed-variant",
+              "action": "info"
+            }
+          ]
+        }
+      ],
+      "kicker": "Kuchnia",
+      "heading": "Kuchnia",
+      "subtitle": "Serce domu. Wszystko pod ręką.",
+      "accent": "#9ff0c2",
+      "image": "/api/image/serve/c64ff1e2aa8e2349599e9c2aab6ee55d/original",
+      "temperature": "sensor.demo_38",
+      "humidity": "sensor.demo_39"
+    },
+    {
+      "id": "sypialnia",
+      "title": "Sypialnia",
+      "icon": "mdi:bed-king-outline",
+      "kind": "room",
+      "devices": [
+        {
+          "entity": "switch.demo_9",
+          "kind": "light",
+          "name": "Światło łóżko",
+          "art": "bulb",
+          "action": "toggle"
+        },
+        {
+          "entity": "switch.demo_10",
+          "kind": "light",
+          "name": "Światło Tv",
+          "art": "bulb",
+          "action": "toggle"
+        },
+        {
+          "entity": "light.demo_3",
+          "kind": "light",
+          "name": "LED Sypialnia",
+          "art": "bulb",
+          "action": "toggle"
+        },
+        {
+          "entity": "switch.demo_16",
+          "kind": "light",
+          "name": "Sleep",
+          "art": "bulb",
+          "action": "toggle"
+        }
+      ],
+      "sections": [
+        {
+          "id": "sypialnia-0",
+          "kicker": "POD KONTROLĄ",
+          "title": "Klimat i szczegóły",
+          "icon": "mdi:tune-variant",
+          "accent": "#a0caff",
+          "items": [
+            {
+              "entity": "climate.demo_5",
+              "kind": "climate",
+              "name": "Klimatyzacja Sypialnia",
+              "icon": "mdi:circle-outline",
+              "action": "info"
+            }
+          ]
+        }
+      ],
+      "kicker": "Sypialnia",
+      "heading": "Sypialnia",
+      "subtitle": "Ciszej, spokojniej, po Twojemu.",
+      "accent": "#a0caff",
+      "image": "/api/image/serve/242e31affb6a5a83adf481b43d2d60ba/original"
+    },
+    {
+      "id": "gabinet",
+      "title": "Gabinet",
+      "icon": "mdi:teddy-bear",
+      "kind": "room",
+      "devices": [
+        {
+          "entity": "switch.demo_15",
+          "kind": "light",
+          "name": "Światło",
+          "art": "bulb",
+          "action": "toggle"
+        },
+        {
+          "entity": "light.demo_4",
+          "kind": "light",
+          "name": "LED Gabinet",
+          "art": "bulb",
+          "action": "toggle"
+        }
+      ],
+      "sections": [
+        {
+          "id": "gabinet-0",
+          "kicker": "POD KONTROLĄ",
+          "title": "Klimat i szczegóły",
+          "icon": "mdi:tune-variant",
+          "accent": "#f2b5d8",
+          "items": [
+            {
+              "entity": "climate.demo_6",
+              "kind": "climate",
+              "name": "Klimatyzacja Gabinet",
+              "icon": "mdi:circle-outline",
+              "action": "info"
+            },
+            {
+              "entity": "binary_sensor.demo_6",
+              "kind": "binary",
+              "name": "Okno Gabinet",
+              "icon": "mdi:window-closed-variant",
+              "action": "info"
+            },
+            {
+              "entity": "climate.demo_1",
+              "kind": "climate",
+              "name": "Nest",
+              "icon": "mdi:thermometer",
+              "action": "info"
+            },
+            {
+              "entity": "climate.demo_7",
+              "kind": "climate",
+              "name": "Gabinet Termostat",
+              "icon": "mdi:circle-outline",
+              "action": "info"
+            }
+          ]
+        },
+        {
+          "id": "gabinet-1",
+          "kicker": "POD KONTROLĄ",
+          "title": "Karmnik",
+          "icon": "mdi:cat",
+          "accent": "#f2b5d8",
+          "items": [
+            {
+              "entity": "sensor.demo_40",
+              "kind": "sensor",
+              "name": "Karmnik · status",
+              "icon": "mdi:bowl",
+              "action": "info"
+            },
+            {
+              "entity": "switch.demo_18",
+              "kind": "light",
+              "name": "Quick",
+              "icon": "mdi:bowl",
+              "action": "info"
+            },
+            {
+              "entity": "switch.demo_19",
+              "kind": "light",
+              "name": "Slow",
+              "icon": "mdi:bowl-outline",
+              "action": "info"
+            },
+            {
+              "entity": "number.demo_1",
+              "kind": "setting",
+              "name": "Manual",
+              "icon": "mdi:hand-pointing-right",
+              "action": "info"
+            }
+          ]
+        }
+      ],
+      "kicker": "Gabinet",
+      "heading": "Gabinet",
+      "subtitle": "Przestrzeń pełna własnego charakteru.",
+      "accent": "#f2b5d8",
+      "image": "/api/image/serve/8ceaf346642fbc177a38c0142ad6bcaf/original",
+      "temperature": "sensor.demo_41"
+    },
+    {
+      "id": "lazienka",
+      "title": "Łazienka",
+      "icon": "mdi:shower-head",
+      "kind": "room",
+      "devices": [
+        {
+          "entity": "switch.demo_13",
+          "kind": "light",
+          "name": "Światło",
+          "art": "bulb",
+          "action": "toggle"
+        },
+        {
+          "entity": "switch.demo_20",
+          "kind": "fan",
+          "name": "Łazienka",
+          "action": "toggle"
+        }
+      ],
+      "sections": [
+        {
+          "id": "lazienka-0",
+          "kicker": "POD KONTROLĄ",
+          "title": "Klimat i szczegóły",
+          "icon": "mdi:tune-variant",
+          "accent": "#97dcff",
+          "items": [
+            {
+              "entity": "binary_sensor.demo_7",
+              "kind": "binary",
+              "name": "Ruch",
+              "icon": "mdi:motion-sensor",
+              "action": "info"
+            },
+            {
+              "entity": "sensor.demo_42",
+              "kind": "sensor",
+              "name": "Wilgotność",
+              "icon": "mdi:circle-outline",
+              "action": "info"
+            },
+            {
+              "entity": "sensor.demo_43",
+              "kind": "sensor",
+              "name": "Temperatura",
+              "icon": "mdi:circle-outline",
+              "action": "info"
+            },
+            {
+              "entity": "sensor.demo_44",
+              "kind": "sensor",
+              "name": "Bateria czujnika",
+              "icon": "mdi:battery",
+              "action": "info"
+            },
+            {
+              "entity": "binary_sensor.demo_3",
+              "kind": "binary",
+              "name": "Wyciek Prysznic",
+              "icon": "mdi:shower-head",
+              "action": "info"
+            },
+            {
+              "entity": "binary_sensor.demo_2",
+              "kind": "binary",
+              "name": "Wyciek Pralka",
+              "icon": "mdi:washing-machine-alert",
+              "action": "info"
+            },
+            {
+              "entity": "sensor.demo_17",
+              "kind": "sensor",
+              "name": "Pralka",
+              "icon": "mdi:washing-machine",
+              "action": "info"
+            }
+          ]
+        },
+        {
+          "id": "lazienka-1",
+          "kicker": "POD KONTROLĄ",
+          "title": "Kuweta",
+          "icon": "mdi:cat",
+          "accent": "#97dcff",
+          "items": [
+            {
+              "entity": "sensor.demo_45",
+              "kind": "sensor",
+              "name": "Kuweta · status",
+              "icon": "mdi:cat",
+              "action": "info"
+            },
+            {
+              "entity": "switch.demo_21",
+              "kind": "light",
+              "name": "Clean",
+              "icon": "mdi:refresh",
+              "action": "info"
+            },
+            {
+              "entity": "switch.demo_22",
+              "kind": "light",
+              "name": "Sleep",
+              "icon": "mdi:sleep",
+              "action": "info"
+            },
+            {
+              "entity": "switch.demo_23",
+              "kind": "light",
+              "name": "Power",
+              "icon": "mdi:power",
+              "action": "info"
+            }
+          ]
+        }
+      ],
+      "kicker": "Łazienka",
+      "heading": "Łazienka",
+      "subtitle": "Komfort, świeże powietrze i spokój.",
+      "accent": "#97dcff",
+      "image": "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1920&q=80",
+      "temperature": "sensor.demo_43",
+      "humidity": "sensor.demo_42"
+    },
+    {
+      "id": "pralnia",
+      "title": "Pralnia",
+      "icon": "mdi:washing-machine",
+      "kind": "room",
+      "sections": [
+        {
+          "id": "pralnia-0",
+          "kicker": "POD KONTROLĄ",
+          "title": "Pralka",
+          "icon": "mdi:washing-machine",
+          "accent": "#c3b3ff",
+          "items": [
+            {
+              "entity": "sensor.demo_17",
+              "kind": "sensor",
+              "name": "Status",
+              "icon": "mdi:circle-outline",
+              "action": "info"
+            },
+            {
+              "entity": "select.demo_1",
+              "kind": "setting",
+              "name": "Temperatura",
+              "icon": "mdi:thermometer-water",
+              "action": "info"
+            },
+            {
+              "entity": "sensor.demo_19",
+              "kind": "sensor",
+              "name": "Czas pozostały",
+              "icon": "mdi:timer-sand",
+              "action": "info"
+            },
+            {
+              "entity": "select.demo_2",
+              "kind": "setting",
+              "name": "Detergent",
+              "icon": "mdi:chart-bubble",
+              "action": "info"
+            },
+            {
+              "entity": "select.demo_3",
+              "kind": "setting",
+              "name": "Zmiękczacz",
+              "icon": "mdi:flower-tulip-outline",
+              "action": "info"
+            },
+            {
+              "entity": "switch.demo_24",
+              "kind": "light",
+              "name": "Para wodna",
+              "icon": "mdi:heat-wave",
+              "action": "toggle"
+            },
+            {
+              "entity": "switch.demo_25",
+              "kind": "light",
+              "name": "Pranie wstępne",
+              "icon": "mdi:numeric-1-circle-outline",
+              "action": "toggle"
+            },
+            {
+              "entity": "sensor.demo_46",
+              "kind": "sensor",
+              "name": "Wh",
+              "icon": "mdi:circle-outline",
+              "action": "info"
+            }
+          ]
+        },
+        {
+          "id": "pralnia-1",
+          "kicker": "POD KONTROLĄ",
+          "title": "Suszarka",
+          "icon": "mdi:tumble-dryer",
+          "accent": "#c3b3ff",
+          "items": [
+            {
+              "entity": "sensor.demo_13",
+              "kind": "sensor",
+              "name": "Status",
+              "icon": "mdi:circle-outline",
+              "action": "info"
+            },
+            {
+              "entity": "sensor.demo_47",
+              "kind": "sensor",
+              "name": "Wh",
+              "icon": "mdi:circle-outline",
+              "action": "info"
+            },
+            {
+              "entity": "sensor.demo_14",
+              "kind": "sensor",
+              "name": "Czas pozostały",
+              "icon": "mdi:timer-sand",
+              "action": "info"
+            },
+            {
+              "entity": "select.demo_4",
+              "kind": "setting",
+              "name": "Program",
+              "icon": "mdi:format-list-bulleted",
+              "action": "info"
+            },
+            {
+              "entity": "select.demo_5",
+              "kind": "setting",
+              "name": "Poziom suszenia",
+              "icon": "mdi:weather-sunny",
+              "action": "info"
+            }
+          ]
+        },
+        {
+          "id": "pralnia-2",
+          "kicker": "POD KONTROLĄ",
+          "title": "Alerty pralni",
+          "icon": "mdi:alert-circle-outline",
+          "accent": "#f7d89f",
+          "items": [
+            {
+              "entity": "binary_sensor.demo_8",
+              "kind": "binary",
+              "name": "Pojemnik na wodę",
+              "icon": "mdi:water-alert",
+              "action": "info"
+            },
+            {
+              "entity": "binary_sensor.demo_9",
+              "kind": "binary",
+              "name": "Filtr suszarki",
+              "icon": "mdi:air-filter",
+              "action": "info"
+            },
+            {
+              "entity": "binary_sensor.demo_2",
+              "kind": "binary",
+              "name": "Wyciek Pralka",
+              "icon": "mdi:washing-machine-alert",
+              "action": "info"
+            }
+          ]
+        }
+      ],
+      "kicker": "Pralnia",
+      "heading": "Pralnia",
+      "subtitle": "Status cykli, programy i czas do końca — spokojnie, bez zgadywania.",
+      "accent": "#c3b3ff",
+      "image": "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=1920&q=80"
+    }
+  ],
+  "twin": {
+    "rooms": {
+      "sypialnia": {
+        "page": "sypialnia",
+        "lights": [
+          {
+            "entity": "switch.demo_9",
+            "name": "Światło łóżko"
+          },
+          {
+            "entity": "switch.demo_10",
+            "name": "Światło Tv"
+          },
+          {
+            "entity": "light.demo_3",
+            "name": "LED Sypialnia"
+          }
+        ],
+        "climate": [
+          {
+            "entity": "climate.demo_5",
+            "anchor": "ac",
+            "name": "Klimatyzacja Sypialnia"
+          }
+        ],
+        "media": [
+          {
+            "entity": "media_player.demo_2",
+            "anchor": "tv",
+            "name": "Telewizor · sypialnia"
+          }
+        ]
+      },
+      "gabinet": {
+        "page": "gabinet",
+        "lights": [
+          {
+            "entity": "switch.demo_15",
+            "name": "Światło"
+          },
+          {
+            "entity": "light.demo_4",
+            "name": "LED Gabinet"
+          }
+        ],
+        "climate": [
+          {
+            "entity": "climate.demo_6",
+            "anchor": "ac",
+            "name": "Klimatyzacja Gabinet"
+          },
+          {
+            "entity": "climate.demo_7",
+            "name": "Gabinet Termostat"
+          }
+        ],
+        "windows": [
+          {
+            "entity": "binary_sensor.demo_6",
+            "anchor": "window",
+            "name": "Okno Gabinet"
+          }
+        ],
+        "pets": [
+          {
+            "entity": "sensor.demo_40",
+            "anchor": "feeder",
+            "name": "Karmnik · status"
+          },
+          {
+            "entity": "sensor.demo_45",
+            "anchor": "litter",
+            "name": "Kuweta · status"
+          }
+        ],
+        "temperature": "sensor.demo_41"
+      },
+      "lazienka": {
+        "page": "lazienka",
+        "lights": [
+          {
+            "entity": "switch.demo_13",
+            "name": "Światło"
+          }
+        ],
+        "fan": [
+          {
+            "entity": "switch.demo_20",
+            "anchor": "fan",
+            "name": "Łazienka"
+          }
+        ],
+        "motion": [
+          {
+            "entity": "binary_sensor.demo_7",
+            "anchor": "motion",
+            "name": "Ruch"
+          }
+        ],
+        "alarms": [
+          {
+            "entity": "binary_sensor.demo_3",
+            "anchor": "leak",
+            "kind": "leak",
+            "name": "Wyciek Prysznic"
+          }
+        ],
+        "temperature": "sensor.demo_43",
+        "humidity": "sensor.demo_42"
+      },
+      "wc": {
+        "page": null,
+        "lights": [
+          {
+            "entity": "switch.demo_14",
+            "name": "Światło WC"
+          }
+        ],
+        "motion": [
+          {
+            "entity": "binary_sensor.demo_10",
+            "anchor": "motion",
+            "name": "Obecność · WC"
+          }
+        ]
+      },
+      "salon": {
+        "page": "salon",
+        "lights": [
+          {
+            "entity": "switch.demo_7",
+            "name": "Lampa podłogowa"
+          },
+          {
+            "entity": "light.demo_2",
+            "name": "LED sufit"
+          },
+          {
+            "entity": "switch.demo_5",
+            "name": "Światło Tv"
+          },
+          {
+            "entity": "switch.demo_6",
+            "name": "Światło sofa"
+          }
+        ],
+        "purifier": [
+          {
+            "entity": "fan.demo_1",
+            "anchor": "purifier",
+            "name": "Oczyszczacz Salon"
+          }
+        ],
+        "climate": [
+          {
+            "entity": "climate.demo_1",
+            "anchor": "thermostat",
+            "name": "Nest"
+          },
+          {
+            "entity": "climate.demo_2",
+            "anchor": "thermostat",
+            "name": "Salon Floor"
+          }
+        ],
+        "media": [
+          {
+            "entity": "media_player.demo_3",
+            "anchor": "tv",
+            "name": "LG OLED · salon"
+          },
+          {
+            "entity": "media_player.demo_4",
+            "anchor": "tv",
+            "name": "Streamer · salon"
+          }
+        ],
+        "temperature": "sensor.demo_36",
+        "humidity": "sensor.demo_37"
+      },
+      "kuchnia": {
+        "page": "kuchnia",
+        "lights": [
+          {
+            "entity": "switch.demo_1",
+            "name": "Światło"
+          },
+          {
+            "entity": "light.demo_1",
+            "name": "LED Kuchnia"
+          },
+          {
+            "entity": "switch.demo_17",
+            "name": "Stół + grill"
+          }
+        ],
+        "media": [
+          {
+            "entity": "media_player.demo_1",
+            "anchor": "speaker",
+            "name": "Echo Dot"
+          }
+        ],
+        "windows": [
+          {
+            "entity": "binary_sensor.demo_5",
+            "anchor": "window",
+            "name": "Okno Kuchnia"
+          }
+        ],
+        "climate": [
+          {
+            "entity": "climate.demo_3",
+            "anchor": "thermostat",
+            "name": "Kitchen Floor"
+          },
+          {
+            "entity": "climate.demo_4",
+            "anchor": "thermostat",
+            "name": "Kitchen Thermostat"
+          }
+        ],
+        "alarms": [
+          {
+            "entity": "binary_sensor.demo_1",
+            "anchor": "leak",
+            "kind": "leak",
+            "name": "Wyciek · kuchnia"
+          },
+          {
+            "entity": "binary_sensor.demo_4",
+            "anchor": "co",
+            "kind": "co",
+            "name": "Czujnik CO"
+          }
+        ],
+        "temperature": "sensor.demo_38",
+        "humidity": "sensor.demo_39"
+      },
+      "korytarz": {
+        "page": null,
+        "lights": [
+          {
+            "entity": "switch.demo_11",
+            "name": "Korytarz"
+          },
+          {
+            "entity": "switch.demo_12",
+            "name": "Schody"
+          }
+        ]
+      },
+      "pralnia": {
+        "page": "pralnia",
+        "alarms": [
+          {
+            "entity": "binary_sensor.demo_2",
+            "anchor": "leak",
+            "kind": "leak",
+            "name": "Wyciek Pralka"
+          }
+        ],
+        "appliances": [
+          {
+            "entity": "sensor.demo_17",
+            "anchor": "washer",
+            "name": "Pralka",
+            "remaining": "sensor.demo_19",
+            "power": "sensor.demo_48"
+          },
+          {
+            "entity": "sensor.demo_13",
+            "anchor": "dryer",
+            "name": "Suszarka",
+            "remaining": "sensor.demo_14"
+          }
+        ]
+      }
+    },
+    "hud": {
+      "weather": "weather.demo_1",
+      "power": "sensor.demo_1",
+      "cost": "sensor.demo_4",
+      "alerts": [
+        "binary_sensor.demo_1",
+        "binary_sensor.demo_2",
+        "binary_sensor.demo_3",
+        "binary_sensor.demo_4"
+      ],
+      "sun": "sun.sun"
+    }
+  }
+}
