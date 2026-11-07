@@ -6,6 +6,8 @@ To darmowa wersja społecznościowa Krystal Twin. Zawiera przykładową makietę
 
 ![Mieszkanie w trybie demonstracyjnym](docs/mieszkanie-demo.png)
 
+Na telefonie tryby widoku są bezpośrednio pod makietą, a niżej jest dziesięć kafli ze zdjęciami, w tym Kocia strefa i Drukarka 3D.
+
 ## Instalacja przez HACS
 
 1. W **HACS → ⋮ → Niestandardowe repozytoria** dodaj `https://github.com/krystianokris/mieszkanie-ha` w kategorii **Integracja**.

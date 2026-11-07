@@ -9,7 +9,7 @@ import twinStyles from "./twin.css?inline";
 import { TwinApp } from "./TwinApp";
 import type { TwinLayout } from "./model";
 
-const VERSION = "0.2.0";
+const VERSION = "0.2.1";
 const DEMO_AFTER_MS = 1500;
 const LAYOUT_TIMEOUT_MS = 8000;
 /** A panel detached for longer than this (navigated away) is torn down. */

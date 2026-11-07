@@ -106,6 +106,7 @@ export function TwinApp(props: {
 
   const HUD_H = () => (phone() ? 62 : 84);
   const BAR_H = () => (phone() ? 70 : 92);
+  const mobileDockTop = () => box().top + box().height * ((APARTMENT.y + APARTMENT.h) / SCENE_H) + 8;
   const panelW = () => (phone() ? 0 : Math.round(Math.min(480, Math.max(400, size().w * 0.31))));
 
   /** Base placement: fit the apartment (not the whole image) into the free area. */
@@ -184,10 +185,10 @@ export function TwinApp(props: {
           </div>
         </Show>
         <Show when={phone() && !selected()}>
-          <RoomList rooms={rooms()} onRoom={(id) => setSelected(id)} style={{ top: `${box().top + box().height * ((APARTMENT.y + APARTMENT.h) / SCENE_H) + 8}px`, bottom: `${BAR_H()}px` }} />
+          <RoomList rooms={rooms()} onRoom={(id) => setSelected(id)} style={{ top: `${mobileDockTop() + 68}px`, bottom: "0" }} />
         </Show>
         <Show when={!(phone() && selected())}>
-          <ModeBar mode={mode()} onMode={setMode} style={selected() && !phone() ? { left: `${(size().w - panelW()) / 2}px` } : {}} />
+          <ModeBar mode={mode()} onMode={setMode} style={phone() ? { top: `${mobileDockTop()}px`, bottom: "auto" } : selected() && !phone() ? { left: `${(size().w - panelW()) / 2}px` } : {}} />
         </Show>
         <Show when={selected()} keyed>
           {(id) => <RoomPanel id={id} layout={props.layout()} features={features()} isAc={isAc} phone={phone()} onClose={() => setSelected(undefined)} />}

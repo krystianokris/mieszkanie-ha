@@ -1454,3 +1454,21 @@
     transition: none !important;
   }
 }
+/* Phone overview: the dock sits directly under the model, followed by room photos. */
+.tw-app.phone .tw-roomlist {
+  grid-auto-rows: clamp(66px, 18vw, 90px);
+  align-content: start;
+  padding-bottom: max(14px, env(safe-area-inset-bottom));
+}
+.tw-app.phone .tw-roomcard {
+  justify-content: flex-end;
+  background: linear-gradient(0deg, #07111ff5, #0b182a30 85%), var(--room-photo, none) center / cover, #132236;
+  border-color: #a9c7e44a;
+  box-shadow: inset 0 1px #d9eeff22;
+  text-shadow: 0 1px 5px #000;
+}
+.tw-app.phone .tw-roomcard b { font-size: 14px; }
+.tw-app.phone .tw-roomcard.alarm { border-color: #ff8879; }
+.tw-app.phone .tw-roomcard.lit:not(.alarm) { border-color: #ffc77670; }
+.tw-app.phone .tw-roomcard > span:empty { display: none; }
+.tw-app.phone .tw-banner { top: 60px; bottom: auto; z-index: 6; }

@@ -2,6 +2,7 @@ import { For, Show } from "solid-js";
 import { fmt, useHass, useT } from "../sdk";
 import { Icon } from "../app/Icon";
 import type { TwinRoom } from "./model";
+import { haNavigate, room3d } from "./rooms3d";
 import { ROOMS } from "./scene";
 import { airflow, alarmOn, ent, litCount, roomTemp, tempColor } from "./state";
 
@@ -18,8 +19,9 @@ export function RoomList(props: { rooms: Record<string, TwinRoom>; onRoom: (id: 
           const lit = () => litCount(hass(), room());
           const alarm = () => (room().alarms ?? []).some((a) => alarmOn(hass(), a));
           const flow = () => (room().climate ?? []).map((c) => airflow(ent(hass(), c.entity))).find(Boolean);
+          const image = room3d(r.id)?.image;
           return (
-            <button type="button" class="tw-roomcard" classList={{ alarm: alarm(), lit: lit() > 0 }} on:click={() => props.onRoom(r.id)}>
+            <button type="button" class="tw-roomcard" classList={{ alarm: alarm(), lit: lit() > 0 }} style={image ? { "--room-photo": `url("${image}")` } : {}} on:click={() => props.onRoom(r.id)}>
               <b>{r.name}</b>
               <span>
                 <Show when={temp() !== undefined}>
@@ -38,6 +40,17 @@ export function RoomList(props: { rooms: Record<string, TwinRoom>; onRoom: (id: 
             </button>
           );
         }}
+      </For>
+      <For each={[
+        { name: "Kocia strefa", image: "/krystal_twin_static/cats/day.webp", path: "/mieszkanie-pokoje/koty" },
+        { name: "Drukarka 3D", image: "/krystal_twin_static/rooms/drukarka.webp", path: "/mieszkanie-pokoje/pokoje#drukarka" },
+      ]}>
+        {(item) => (
+          <button type="button" class="tw-roomcard" style={{ "--room-photo": `url("${item.image}")` }}
+            on:click={() => haNavigate(item.path)}>
+            <b>{item.name}</b>
+          </button>
+        )}
       </For>
     </div>
   );
