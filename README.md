@@ -16,12 +16,24 @@ To darmowa wersja społecznościowa Krystal Twin. Zawiera przykładową makietę
 
 Panel używa sesji użytkownika HA i jego uprawnień do encji. Działa jako integracja z własnym panelem bocznym. Do ręcznej instalacji nie potrzebujesz HACS ani kompilatora.
 
+## Pokoje Mieszkanie i Kocia strefa
+
+Po zainstalowaniu integracji Mieszkanie:
+
+1. W **Ustawienia → Dashboardy → Zasoby** dodaj adres `/krystal_twin_static/mieszkanie-rooms-card.js` jako **Moduł JavaScript**. Jeśli nie widzisz zakładki Zasoby, włącz tryb zaawansowany w profilu HA.
+2. Utwórz osobny dashboard **Pokoje Mieszkanie** z adresem `mieszkanie-pokoje`. Możesz ukryć go na pasku bocznym, bo makieta otwiera go skrótami.
+3. W edytorze nowego dashboardu otwórz **Edytor konfiguracji RAW**, wklej zawartość [pokoje-mieszkanie.json](pokoje-mieszkanie.json) i zapisz. JSON jest poprawnym zapisem konfiguracji YAML w tym edytorze.
+4. Zamień przykładowe identyfikatory `*.demo_*` na własne. Te same identyfikatory w pliku makiety i w konfiguracji pokoi oznaczają to samo urządzenie. Zapisz i odśwież HA.
+5. Z makiety wybierz pokój i użyj **Wejdź do pokoju**. W Gabinecie jest też skrót do Kociej strefy. Jeśli nie masz drukarki, kuwety lub karmnika, usuń ich przykładowe konfiguracje według potrzeb.
+
+Zdjęcia pokoi i sceny Kociej strefy są w paczce. Podglądy kamer i sterowanie urządzeniami wymagają odpowiadających im encji HA.
+
 ## Dopasowanie do swojego domu
 
 - `layout.json` zawiera przypisania urządzeń, skróty sterowania, nazwy i encje podsumowania. Powtarzające się identyfikatory zastąp konsekwentnie w całym pliku.
 - `frontend/twin/` w katalogu integracji zawiera rendery `day.webp`, `night.webp` i `lit.webp`. Własne obrazy powinny mieć ten sam kadr i proporcje 16:9.
 - Jeśli układ pokoi się różni, zmień obrysy i punkty urządzeń w `frontend/src/twin/scene.json` w źródłach. Same obrazy nie przesuwają znaczników.
-- Wersja publiczna obejmuje panel Mieszkanie. Osobny prywatny dashboard „Pokoje Mieszkanie” nie wchodzi w skład paczki.
+- W pakiecie jest też osobny dashboard **Pokoje Mieszkanie** z Pomieszczeniami i Kocią strefą.
 
 ## Budowanie
 
