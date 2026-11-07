@@ -1,0 +1,542 @@
+{
+  "title": "Pomieszczenia",
+  "views": [
+    {
+      "title": "Pomieszczenia",
+      "path": "pokoje",
+      "type": "panel",
+      "background": "#040913",
+      "cards": [
+        {
+          "type": "custom:mieszkanie-rooms-card",
+          "home_path": "/mieszkanie",
+          "title": "Pomieszczenia",
+          "language": "pl",
+          "rooms": [
+            {
+              "id": "salon",
+              "name": "Salon",
+              "icon": "mdi:sofa-outline",
+              "image": "/krystal_twin_static/rooms/salon.webp",
+              "accent": "#f59e0b",
+              "size": "big",
+              "subtitle": "Ciepłe światło. Dobry odpoczynek.",
+              "temperature": "sensor.demo_36",
+              "humidity": "sensor.demo_37",
+              "lights": [
+                {
+                  "entity": "switch.demo_5",
+                  "name": "Światło TV",
+                  "icon": "mdi:ceiling-light-outline"
+                },
+                {
+                  "entity": "switch.demo_6",
+                  "name": "Światło sofa",
+                  "icon": "mdi:ceiling-light-outline"
+                },
+                {
+                  "entity": "switch.demo_26",
+                  "name": "Światło 3",
+                  "icon": "mdi:ceiling-light-outline"
+                },
+                {
+                  "entity": "switch.demo_27",
+                  "name": "Światło 4",
+                  "icon": "mdi:ceiling-light-outline"
+                },
+                {
+                  "entity": "light.demo_2",
+                  "name": "LED sufit",
+                  "icon": "mdi:led-strip-variant"
+                },
+                {
+                  "entity": "switch.demo_7",
+                  "name": "Lampa podłogowa",
+                  "icon": "mdi:floor-lamp-outline"
+                },
+                {
+                  "entity": "switch.demo_8",
+                  "name": "Meble",
+                  "icon": "mdi:bookshelf"
+                }
+              ],
+              "climate": [
+                {
+                  "entity": "climate.demo_1",
+                  "name": "Nest",
+                  "type": "main"
+                },
+                {
+                  "entity": "climate.demo_2",
+                  "name": "Podłogówka",
+                  "type": "floor"
+                }
+              ],
+              "media": [
+                {
+                  "entity": "media_player.demo_4",
+                  "name": "Google TV Streamer",
+                  "volume_entity": "media_player.demo_3"
+                }
+              ],
+              "sensors": [
+                {
+                  "entity": "sensor.demo_33",
+                  "name": "Pyły PM2.5",
+                  "type": "pm"
+                },
+                {
+                  "entity": "sensor.demo_35",
+                  "name": "Jakość powietrza",
+                  "type": "aq"
+                }
+              ],
+              "devices": [
+                {
+                  "type": "purifier",
+                  "name": "Oczyszczacz Levoit",
+                  "entity": "fan.demo_1",
+                  "pm25": "sensor.demo_33",
+                  "filter": "sensor.demo_34"
+                }
+              ]
+            },
+            {
+              "id": "kuchnia",
+              "name": "Kuchnia",
+              "icon": "mdi:countertop-outline",
+              "image": "/krystal_twin_static/rooms/kuchnia.webp",
+              "accent": "#34d399",
+              "size": "wide",
+              "subtitle": "Serce domu. Wszystko pod ręką.",
+              "temperature": "sensor.demo_38",
+              "humidity": "sensor.demo_39",
+              "lights": [
+                {
+                  "entity": "switch.demo_1",
+                  "name": "Światło główne",
+                  "icon": "mdi:ceiling-light-outline"
+                },
+                {
+                  "entity": "switch.demo_3",
+                  "name": "Zlew",
+                  "icon": "mdi:faucet"
+                },
+                {
+                  "entity": "switch.demo_4",
+                  "name": "Szafki",
+                  "icon": "mdi:wall-sconce-flat-outline"
+                },
+                {
+                  "entity": "light.demo_1",
+                  "name": "LED kuchnia",
+                  "icon": "mdi:led-strip-variant"
+                },
+                {
+                  "entity": "switch.demo_17",
+                  "name": "Stół",
+                  "icon": "mdi:table-chair"
+                },
+                {
+                  "entity": "switch.demo_28",
+                  "name": "Grill",
+                  "icon": "mdi:grill-outline"
+                },
+                {
+                  "entity": "light.demo_5",
+                  "name": "LED blat",
+                  "icon": "mdi:led-strip"
+                }
+              ],
+              "climate": [
+                {
+                  "entity": "climate.demo_4",
+                  "name": "Termostat",
+                  "type": "main"
+                },
+                {
+                  "entity": "climate.demo_8",
+                  "name": "Grzejnik (TRV)",
+                  "type": "trv"
+                },
+                {
+                  "entity": "climate.demo_3",
+                  "name": "Podłogówka",
+                  "type": "floor"
+                }
+              ],
+              "media": [
+                {
+                  "entity": "media_player.demo_5",
+                  "name": "Chromecast · kuchnia",
+                  "volume_entity": "media_player.demo_6"
+                },
+                {
+                  "entity": "media_player.demo_1",
+                  "name": "Echo Dot",
+                  "speaker": true
+                }
+              ],
+              "sensors": [
+                {
+                  "entity": "binary_sensor.demo_5",
+                  "name": "Okno",
+                  "type": "window"
+                },
+                {
+                  "entity": "binary_sensor.demo_1",
+                  "name": "Wyciek pod zlewem",
+                  "type": "leak"
+                }
+              ]
+            },
+            {
+              "id": "sypialnia",
+              "name": "Sypialnia",
+              "icon": "mdi:bed-king-outline",
+              "image": "/krystal_twin_static/rooms/sypialnia.webp",
+              "accent": "#f472b6",
+              "subtitle": "Ciszej, spokojniej, po Twojemu.",
+              "temperature": "climate.demo_5",
+              "lights": [
+                {
+                  "entity": "switch.demo_9",
+                  "name": "Światło łóżko",
+                  "icon": "mdi:ceiling-light-outline"
+                },
+                {
+                  "entity": "switch.demo_10",
+                  "name": "Światło TV",
+                  "icon": "mdi:ceiling-light-outline"
+                },
+                {
+                  "entity": "light.demo_3",
+                  "name": "LED",
+                  "icon": "mdi:led-strip-variant"
+                }
+              ],
+              "climate": [
+                {
+                  "entity": "climate.demo_5",
+                  "name": "Klimatyzacja",
+                  "type": "main"
+                }
+              ],
+              "media": [
+                {
+                  "entity": "media_player.demo_2",
+                  "name": "Chromecast · sypialnia",
+                  "volume_entity": "media_player.demo_7"
+                }
+              ]
+            },
+            {
+              "id": "gabinet",
+              "name": "Gabinet",
+              "icon": "mdi:teddy-bear",
+              "image": "/krystal_twin_static/rooms/gabinet.webp",
+              "accent": "#ec4899",
+              "subtitle": "Przestrzeń pełna własnego charakteru.",
+              "temperature": "sensor.demo_41",
+              "humidity": "sensor.demo_49",
+              "lights": [
+                {
+                  "entity": "switch.demo_15",
+                  "name": "Światło",
+                  "icon": "mdi:ceiling-light-outline"
+                },
+                {
+                  "entity": "light.demo_4",
+                  "name": "LED",
+                  "icon": "mdi:led-strip-variant"
+                }
+              ],
+              "climate": [
+                {
+                  "entity": "climate.demo_7",
+                  "name": "Termostat",
+                  "type": "main"
+                },
+                {
+                  "entity": "climate.demo_9",
+                  "name": "Grzejnik (TRV)",
+                  "type": "trv"
+                },
+                {
+                  "entity": "climate.demo_6",
+                  "name": "Klimatyzacja",
+                  "type": "ac"
+                }
+              ],
+              "sensors": [
+                {
+                  "entity": "binary_sensor.demo_6",
+                  "name": "Okno",
+                  "type": "window"
+                }
+              ],
+              "devices": [
+                {
+                  "type": "pet_feeder",
+                  "name": "Karmnik kota",
+                  "status": "sensor.demo_40",
+                  "portions": "number.demo_1",
+                  "switches": [
+                    {
+                      "entity": "switch.demo_18",
+                      "name": "Szybkie karmienie"
+                    },
+                    {
+                      "entity": "switch.demo_19",
+                      "name": "Wolne karmienie"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "lazienka",
+              "name": "Łazienka",
+              "icon": "mdi:shower-head",
+              "image": "/krystal_twin_static/rooms/lazienka.webp",
+              "accent": "#38bdf8",
+              "subtitle": "Komfort, świeże powietrze i spokój.",
+              "temperature": "sensor.demo_43",
+              "humidity": "sensor.demo_42",
+              "lights": [
+                {
+                  "entity": "switch.demo_13",
+                  "name": "Światło 1",
+                  "icon": "mdi:ceiling-light-outline"
+                },
+                {
+                  "entity": "switch.demo_29",
+                  "name": "Światło 2",
+                  "icon": "mdi:ceiling-light-outline"
+                },
+                {
+                  "entity": "switch.demo_20",
+                  "name": "Wentylator",
+                  "icon": "mdi:fan",
+                  "type": "fan"
+                }
+              ],
+              "sensors": [
+                {
+                  "entity": "binary_sensor.demo_7",
+                  "name": "Obecność",
+                  "type": "motion"
+                },
+                {
+                  "entity": "binary_sensor.demo_3",
+                  "name": "Wyciek · prysznic",
+                  "type": "leak"
+                },
+                {
+                  "entity": "sensor.demo_44",
+                  "name": "Bateria czujnika",
+                  "type": "battery"
+                }
+              ],
+              "devices": [
+                {
+                  "type": "litter_box",
+                  "name": "Kuweta",
+                  "status": "sensor.demo_45",
+                  "clean": "switch.demo_21",
+                  "switches": [
+                    {
+                      "entity": "switch.demo_22",
+                      "name": "Tryb nocny"
+                    },
+                    {
+                      "entity": "switch.demo_23",
+                      "name": "Zasilanie"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "korytarz",
+              "name": "Korytarz i WC",
+              "icon": "mdi:stairs",
+              "image": "/krystal_twin_static/rooms/korytarz.webp",
+              "accent": "#fbbf24",
+              "subtitle": "Pierwsze i ostatnie wrażenie.",
+              "lights": [
+                {
+                  "entity": "switch.demo_30",
+                  "name": "Korytarz 1",
+                  "icon": "mdi:ceiling-light-outline"
+                },
+                {
+                  "entity": "switch.demo_11",
+                  "name": "Korytarz 2",
+                  "icon": "mdi:ceiling-light-outline"
+                },
+                {
+                  "entity": "switch.demo_31",
+                  "name": "Wejście",
+                  "icon": "mdi:outdoor-lamp"
+                },
+                {
+                  "entity": "switch.demo_12",
+                  "name": "Schody",
+                  "icon": "mdi:stairs"
+                },
+                {
+                  "entity": "switch.demo_14",
+                  "name": "WC",
+                  "icon": "mdi:toilet"
+                }
+              ],
+              "sensors": [
+                {
+                  "entity": "binary_sensor.demo_10",
+                  "name": "Obecność · WC",
+                  "type": "motion"
+                },
+                {
+                  "entity": "binary_sensor.demo_4",
+                  "name": "Czujnik czadu",
+                  "type": "co"
+                }
+              ]
+            },
+            {
+              "id": "pralnia",
+              "name": "Pralnia",
+              "icon": "mdi:washing-machine",
+              "image": "/krystal_twin_static/rooms/pralnia.webp",
+              "accent": "#a78bfa",
+              "subtitle": "Pranie i suszenie pod kontrolą.",
+              "sensors": [
+                {
+                  "entity": "binary_sensor.demo_2",
+                  "name": "Wyciek · pralka",
+                  "type": "leak"
+                }
+              ],
+              "devices": [
+                {
+                  "type": "washer",
+                  "name": "Pralka",
+                  "status": "sensor.demo_17",
+                  "remaining": "sensor.demo_19",
+                  "temperature": "select.demo_1"
+                },
+                {
+                  "type": "dryer",
+                  "name": "Suszarka",
+                  "status": "sensor.demo_13",
+                  "remaining": "sensor.demo_14",
+                  "program": "select.demo_4",
+                  "water_full": "binary_sensor.demo_8",
+                  "filter": "binary_sensor.demo_9"
+                }
+              ]
+            },
+            {
+              "id": "drukarka",
+              "name": "Drukarka 3D",
+              "icon": "mdi:printer-3d-nozzle",
+              "image": "/krystal_twin_static/rooms/drukarka.webp",
+              "accent": "#22d3ee",
+              "subtitle": "Kącik majsterkowicza.",
+              "devices": [
+                {
+                  "type": "printer",
+                  "name": "Bambu Lab A1",
+                  "status": "sensor.demo_50",
+                  "stage": "sensor.demo_51",
+                  "progress": "sensor.demo_52",
+                  "remaining": "sensor.demo_53",
+                  "end_time": "sensor.demo_54",
+                  "layer": "sensor.demo_55",
+                  "total_layers": "sensor.demo_56",
+                  "task": "sensor.demo_57",
+                  "nozzle": "sensor.demo_58",
+                  "nozzle_target": "sensor.demo_59",
+                  "bed": "sensor.demo_60",
+                  "bed_target": "sensor.demo_61",
+                  "image": "image.demo_1",
+                  "camera": "camera.demo_1",
+                  "light": "light.demo_6",
+                  "pause": "button.demo_1",
+                  "resume": "button.demo_2",
+                  "stop": "button.demo_3",
+                  "filaments": [
+                    "sensor.demo_62",
+                    "sensor.demo_63",
+                    "sensor.demo_64",
+                    "sensor.demo_65"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "koty",
+              "name": "Kocia strefa",
+              "icon": "mdi:cat",
+              "image": "/krystal_twin_static/cats/day.webp",
+              "accent": "#a78bfa",
+              "subtitle": "Kuweta i karmnik na żywo.",
+              "link": "/mieszkanie-pokoje/koty"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Kocia strefa",
+      "path": "koty",
+      "icon": "mdi:cat",
+      "type": "panel",
+      "cards": [
+        {
+          "type": "custom:mieszkanie-cats-card",
+          "language": "pl",
+          "image_base": "/krystal_twin_static/cats/",
+          "litter": {
+            "status": "sensor.demo_45",
+            "clean": "button.demo_4",
+            "bin_full": "binary_sensor.demo_11",
+            "problem": "binary_sensor.demo_12",
+            "weight": "sensor.demo_66",
+            "visits": "sensor.demo_67",
+            "duration": "sensor.demo_68",
+            "switches": [
+              {
+                "entity": "switch.demo_22",
+                "name": "Tryb nocny"
+              },
+              {
+                "entity": "switch.demo_32",
+                "name": "UV"
+              },
+              {
+                "entity": "switch.demo_33",
+                "name": "Dezodoryzacja"
+              }
+            ]
+          },
+          "feeder": {
+            "status": "sensor.demo_40",
+            "portions": "number.demo_1",
+            "quick_feed": "button.demo_5",
+            "last": "sensor.demo_69",
+            "switches": [
+              {
+                "entity": "switch.demo_19",
+                "name": "Wolne karmienie"
+              }
+            ]
+          },
+          "back_path": "/mieszkanie-pokoje/pokoje",
+          "back_name": "Pomieszczenia"
+        }
+      ]
+    }
+  ]
+}

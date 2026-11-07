@@ -6,27 +6,24 @@ To darmowa wersja społecznościowa Krystal Twin. Zawiera przykładową makietę
 
 ![Mieszkanie w trybie demonstracyjnym](docs/mieszkanie-demo.png)
 
+## Instalacja przez HACS
+
+1. W **HACS → ⋮ → Niestandardowe repozytoria** dodaj `https://github.com/krystianokris/mieszkanie-ha` w kategorii **Integracja**.
+2. Pobierz **Mieszkanie na żywo**, a następnie uruchom ponownie Home Assistant.
+3. W **Ustawienia → Urządzenia i usługi → Dodaj integrację** wybierz **Krystal Twin (Mieszkanie na żywo)**.
+4. Na pasku bocznym pojawią się **Mieszkanie** i **Pokoje Mieszkanie**. W Pokojach jest też **Kocia strefa**, dostępna z kafla i ze skrótu w Gabinecie.
+
+HACS pobiera pliki. Integracja rejestruje oba panele oraz ładuje dołączone karty i grafiki. Jeżeli adres `mieszkanie-pokoje` jest już używany przez Twój dashboard, integracja korzysta z istniejącego adresu.
+
 ## Instalacja ręczna
 
-1. Pobierz archiwum z tego repozytorium i rozpakuj je.
-2. Skopiuj katalog `custom_components/krystal_twin` do katalogu `custom_components` w konfiguracji Home Assistant. Po skopiowaniu powinien istnieć plik `config/custom_components/krystal_twin/manifest.json`.
-3. Otwórz `config/custom_components/krystal_twin/frontend/layout.json` i zastąp identyfikatory `*.demo_*` własnymi. Identyfikatory znajdziesz w **Narzędzia deweloperskie → Stany**. Wstawiaj encje tego samego typu, np. `light.demo_1` → `light.salon`. Na początek wystarczy jedno pomieszczenie. Przykładowe encje bez odpowiednika mogą pokazywać brak danych.
-4. Uruchom ponownie HA. W **Ustawienia → Urządzenia i usługi → Dodaj integrację** wyszukaj **Krystal Twin (Mieszkanie na żywo)**.
-5. Otwórz **Mieszkanie** na pasku bocznym. Po zmianie `layout.json` przeładuj integrację i odśwież panel.
+Pobierz [ZIP repozytorium](https://github.com/krystianokris/mieszkanie-ha/archive/refs/heads/main.zip) i skopiuj katalog `custom_components/krystal_twin` do `custom_components` w konfiguracji HA. Uruchom ponownie HA i dodaj integrację jak w kroku 3.
 
-Panel używa sesji użytkownika HA i jego uprawnień do encji. Działa jako integracja z własnym panelem bocznym. Do ręcznej instalacji nie potrzebujesz HACS ani kompilatora.
+## Przypisz własne encje
 
-## Pokoje Mieszkanie i Kocia strefa
+Przy pierwszym uruchomieniu powstają `config/krystal_twin/layout.json` i `config/krystal_twin/pokoje-mieszkanie.json`. Podmień identyfikatory `*.demo_*` na własne z **Narzędzia deweloperskie → Stany**. W obu plikach ten sam identyfikator przykładowy oznacza to samo urządzenie. Na początek wystarczy jedno pomieszczenie. Po zapisaniu przeładuj integrację i odśwież HA.
 
-Po zainstalowaniu integracji Mieszkanie:
-
-1. W **Ustawienia → Dashboardy → Zasoby** dodaj adres `/krystal_twin_static/mieszkanie-rooms-card.js` jako **Moduł JavaScript**. Jeśli nie widzisz zakładki Zasoby, włącz tryb zaawansowany w profilu HA.
-2. Utwórz osobny dashboard **Pokoje Mieszkanie** z adresem `mieszkanie-pokoje`. Możesz ukryć go na pasku bocznym, bo makieta otwiera go skrótami.
-3. W edytorze nowego dashboardu otwórz **Edytor konfiguracji RAW**, wklej zawartość [pokoje-mieszkanie.json](pokoje-mieszkanie.json) i zapisz. JSON jest poprawnym zapisem konfiguracji YAML w tym edytorze.
-4. Zamień przykładowe identyfikatory `*.demo_*` na własne. Te same identyfikatory w pliku makiety i w konfiguracji pokoi oznaczają to samo urządzenie. Zapisz i odśwież HA.
-5. Z makiety wybierz pokój i użyj **Wejdź do pokoju**. W Gabinecie jest też skrót do Kociej strefy. Jeśli nie masz drukarki, kuwety lub karmnika, usuń ich przykładowe konfiguracje według potrzeb.
-
-Zdjęcia pokoi i sceny Kociej strefy są w paczce. Podglądy kamer i sterowanie urządzeniami wymagają odpowiadających im encji HA.
+Jeśli aktualizujesz wydanie 0.1.0 z własną konfiguracją, zachowaj kopię dotychczasowego `layout.json` przed pobraniem aktualizacji i wstaw ją do `config/krystal_twin/`. Własne konfiguracje w tym katalogu pozostają przy aktualizacjach HACS.
 
 ## Dopasowanie do swojego domu
 

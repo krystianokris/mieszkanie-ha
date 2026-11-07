@@ -1,6 +1,6 @@
 {
   "domain": "krystal_twin",
-  "name": "Krystal Twin (Mieszkanie na żywo)",
+  "name": "Krystal Twin (Mieszkanie na \u00c5\u00bcywo)",
   "codeowners": [
     "@krystianokris"
   ],
@@ -16,5 +16,5 @@
   "issue_tracker": "https://github.com/krystianokris/mieszkanie-ha/issues",
   "requirements": [],
   "single_config_entry": true,
-  "version": "0.1.0"
+  "version": "0.2.0"
 }
